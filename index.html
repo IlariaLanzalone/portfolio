@@ -3,35 +3,208 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Ilaria Lanzalone - Home</title>
+  <title>Portfolio di Ilaria Lanzalone</title>
   <link rel="stylesheet" href="style.css" />
+  <style>
+    /* Solo per questa pagina: stile riquadri per accordion */
+    .accordion-section {
+      max-width: 720px;
+      margin: 30px auto;
+      border: 3px solid #7e6eb9;
+      border-radius: 20px;
+      background-color: #e8e5f7;
+      color: #4a3f7a;
+      box-shadow: 0 10px 25px rgba(126, 110, 185, 0.15);
+      padding: 0 30px 20px 30px;
+      text-align: left;
+      overflow: hidden;
+    }
+    /* Titoli accordion */
+    .accordion-toggle {
+      cursor: pointer;
+      font-weight: 700;
+      font-size: 1.8rem;
+      padding: 15px 0;
+      user-select: none;
+      color: #7e6eb9;
+      border-bottom: 1px solid #7e6eb9;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+    /* Triangolino */
+    .accordion-toggle::before {
+      content: '▶';
+      color: #7e6eb9;
+      font-weight: bold;
+      display: inline-block;
+      width: 1.2em;
+      transition: transform 0.3s ease;
+      flex-shrink: 0;
+    }
+    /* Triangolo ruotato quando aperto */
+    .accordion-toggle.open::before {
+      transform: rotate(90deg);
+    }
+    /* Contenuto accordion, inizialmente nascosto */
+    .accordion-content {
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.35s ease, padding-top 0.35s ease;
+      font-size: 1.1rem;
+      line-height: 1.6;
+      padding-left: 1.5em;
+      padding-top: 0;
+    }
+    /* Contenuto aperto */
+    .accordion-content.open {
+      max-height: 1000px; /* abbastanza grande da contenere il testo */
+      padding-top: 15px;
+    }
+    /* Liste senza pallini */
+    .accordion-content ul {
+      list-style: none;
+      padding-left: 0;
+      margin-left: 0;
+      text-align: justify;
+    }
+    .accordion-content ul li {
+      margin-bottom: 8px;
+    }
+    /* Bottone torna indietro identico a index */
+    .go-back {
+      max-width: 720px;
+      margin: 50px auto;
+      text-align: center;
+    }
+    .go-back .button {
+      font-size: 1.3rem;
+      font-weight: 700;
+      padding: 16px 50px;
+      color: #7e6eb9;
+      background-color: transparent;
+      border: 3px solid #7e6eb9;
+      border-radius: 45px;
+      cursor: pointer;
+      transition: all 0.4s ease;
+      display: inline-block;
+      box-shadow: 0 7px 18px rgba(126, 110, 185, 0.3);
+      text-decoration: none;
+      user-select: none;
+    }
+    .go-back .button:hover {
+      color: white;
+      background-color: #7e6eb9;
+      box-shadow: 0 9px 28px rgba(126, 110, 185, 0.7);
+      border-color: #6b5fad;
+    }
+    /* Header centrato e titolo più grande */
+    header {
+      text-align: center;
+      margin-bottom: 40px;
+    }
+    header h1 {
+      font-size: 3.5rem;
+      color: #7e6eb9;
+      margin: 0;
+    }
+    header p {
+      font-style: italic;
+      font-size: 1.4rem;
+      color: #a89ee1;
+      margin: 0;
+    }
+    footer {
+      text-align: center;
+      font-style: italic;
+      color: #a89ee1;
+      padding-bottom: 20px;
+    }
+  </style>
 </head>
 <body>
+
   <header>
-    <h1 class="main-title">Ilaria Lanzalone</h1>
-    <p class="subtitle">Studentessa appassionata di programmazione, fotografia e design</p>
+    <h1>Ilaria Lanzalone</h1>
+    <p>Studentessa appassionata di programmazione, fotografia e design</p>
   </header>
 
-  <main>
-    <section class="intro-box">
-      <p>
-        Questo progetto rappresenta la sintesi delle competenze che ho acquisito durante il mio percorso scolastico e personale.
-      </p>
-      <p>
-        Ho lavorato intensamente con HTML, CSS e Java per creare un portfolio che mostri concretamente i miei lavori, le esperienze e le abilità sviluppate.
-      </p>
-      <p>
-        Qui potrai scoprire il mio viaggio attraverso il mondo della programmazione, del design grafico e della fotografia, e vedere come ogni progetto contribuisca a costruire il mio percorso professionale.
-      </p>
-    </section>
-
-    <div class="button-container">
-      <button class="btn" onclick="location.href='secondapagina.html'">Vai al mio Portfolio</button>
+  <!-- Chi sono come accordion -->
+  <section class="accordion-section">
+    <h2 class="accordion-toggle">Chi sono</h2>
+    <div class="accordion-content">
+      <p>Mi chiamo Ilaria Lanzalone. Frequento il liceo Scientifico Opzione Scienze Applicate Leonardo Da Vinci. Sono appassionata di programmazione e fotografia. Amo esplorare nuove tecnologie e creare progetti sia grafici che software.</p>
     </div>
-  </main>
+  </section>
+
+  <!-- Progetti ed esperienze -->
+  <section class="accordion-section">
+    <h2 class="accordion-toggle">I miei progetti ed esperienze</h2>
+    <div class="accordion-content">
+      <h3>📌 Progetti scolastici</h3>
+      <ul>
+        <li><strong>Cartoline Virtuali (PON)</strong> – cartoline digitali e riprese con drone.</li>
+        <li><strong>Video promozionale</strong> – montaggio video per la scuola.</li>
+        <li><strong>PON Construct</strong> – videogioco educativo con Construct.</li>
+        <li><strong>Laboratori scolastici</strong> – HTML, MySQL, C++ su progetti concreti.</li>
+      </ul>
+
+      <h3>📸 Attività extracurriculari</h3>
+      <ul>
+        <li><strong>Portfolio fotografico</strong> – fotografia artistica ed editing.</li>
+        <li><strong>Corso LearnGo</strong> – certificazione Go (Golang).</li>
+      </ul>
+
+      <h3>📚 Altre competenze sviluppate</h3>
+      <ul>
+        <li>Reti e protocolli, matematica logica, inglese.</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- Competenze -->
+  <section class="accordion-section">
+    <h2 class="accordion-toggle">Le mie competenze</h2>
+    <div class="accordion-content">
+      <ul>
+        <li>✅ Programmazione in Go (Golang) – corso <strong>LearnGo</strong> con attestato</li>
+        <li>✅ Conoscenze di C++, HTML, CSS</li>
+        <li>✅ Esperienza con GitHub e gestione di progetti open source</li>
+        <li>✅ Linguaggi aggiuntivi: MySQL, VBA (Visual Basic per Excel), Visual Basic</li>
+        <li>✅ Fondamenti di reti (indirizzi IP, subnetting, configurazioni base)</li>
+        <li>✅ Fotografia e montaggio video (drone, editing, creatività visiva)</li>
+        <li>✅ Grafica digitale e design (progetti personali e scolastici)</li>
+        <li>✅ Costruzione di videogiochi con Construct</li>
+        <li>✅ Inglese (buona comprensione e produzione)</li>
+        <li>✅ Competenze matematiche e logiche grazie ai percorsi informatici seguiti</li>
+      </ul>
+    </div>
+  </section>
+
+  <div class="go-back">
+    <a href="index.html" class="button">⬅ Torna all’introduzione</a>
+  </div>
 
   <footer>
     <p>© 2025 Ilaria Lanzalone</p>
   </footer>
+
+  <script>
+    // Funzione accordion su tutti i titoli
+    document.querySelectorAll('.accordion-toggle').forEach(toggle => {
+      toggle.addEventListener('click', () => {
+        const content = toggle.nextElementSibling;
+        const isOpen = content.classList.toggle('open');
+        toggle.classList.toggle('open', isOpen);
+
+        if (isOpen) {
+          toggle.innerHTML = '▼ ' + toggle.textContent.replace(/^▶ |▼ /, '').trim();
+        } else {
+          toggle.innerHTML = '▶ ' + toggle.textContent.replace(/^▶ |▼ /, '').trim();
+        }
+      });
+    });
+  </script>
+
 </body>
-</html>
+</
