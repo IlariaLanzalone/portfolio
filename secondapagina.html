@@ -219,6 +219,14 @@ ul {
       });
     });
   </script>
-
+<script>
+  document.querySelectorAll('.accordion-toggle').forEach(toggle => {
+    toggle.addEventListener('click', () => {
+      const content = toggle.nextElementSibling;
+      const isOpen = content.classList.toggle('open');
+      toggle.classList.toggle('open', isOpen);
+    });
+  });
+</script>
 </body>
 </
