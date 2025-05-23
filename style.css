@@ -144,3 +144,14 @@ footer {
   from { opacity: 0; transform: translateY(-10px); }
   to { opacity: 1; transform: translateY(0); }
 }
+.accordion-content {
+  display: none;
+  margin-top: 15px;
+  text-align: left;
+  font-size: 1.1rem;
+  line-height: 1.6;
+}
+
+.accordion-content.open {
+  display: block;
+}
