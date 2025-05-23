@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Portfolio di Ilaria Lanzalone</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <header>
+    <h1>Ilaria Lanzalone</h1>
+    <p>Studentessa appassionata di programmazione, fotografia e design</p>
+  </header>
+
+  <section class="accordion-section fade-in">
+    <h2 class="accordion-toggle">▶ I miei progetti ed esperienze</h2>
+    <div class="accordion-content">
+      <h3>📌 Progetti scolastici</h3>
+      <ul>
+        <li><strong>Cartoline Virtuali (PON)</strong> – cartoline digitali e riprese con drone.</li>
+        <li><strong>Video promozionale</strong> – montaggio video per la scuola.</li>
+        <li><strong>PON Construct</strong> – videogioco educativo con Construct.</li>
+        <li><strong>Laboratori scolastici</strong> – HTML, MySQL, C++ su progetti concreti.</li>
+      </ul>
+      <h3>📸 Attività extracurriculari</h3>
+      <ul>
+        <li><strong>Portfolio fotografico</strong> – fotografia artistica ed editing.</li>
+        <li><strong>Corso LearnGo</strong> – certificazione Go (Golang).</li>
+      </ul>
+      <h3>📚 Altre competenze sviluppate</h3>
+      <ul>
+        <li>Reti e protocolli, matematica logica, inglese.</li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="accordion-section fade-in">
+    <h2 class="accordion-toggle">▶ Le mie competenze</h2>
+    <div class="accordion-content">
+      <ul>
+        <li>✅ Programmazione in Go (Golang)</li>
+        <li>✅ Conoscenze di C++, HTML, CSS</li>
+        <li>✅ GitHub e progetti open source</li>
+        <li>✅ MySQL, VBA, Visual Basic</li>
+        <li>✅ Fondamenti di reti e subnetting</li>
+        <li>✅ Fotografia e montaggio video</li>
+        <li>✅ Grafica digitale e design</li>
+        <li>✅ Videogiochi con Construct</li>
+        <li>✅ Inglese (buona comprensione e produzione)</li>
+        <li>✅ Competenze matematiche e logiche</li>
+      </ul>
+    </div>
+  </section>
+
+  <footer>
+    <p>Grazie per l'attenzione e alla prossima!<br>© 2025 Ilaria Lanzalone</p>
+  </footer>
+
+  <script>
+    document.querySelectorAll('.accordion-toggle').forEach(toggle => {
+      toggle.addEventListener('click', () => {
+        const content = toggle.nextElementSibling;
+        const allContents = document.querySelectorAll('.accordion-content');
+
+        allContents.forEach(c => {
+          if (c !== content) {
+            c.classList.remove('open');
+            c.previousElementSibling.innerHTML = c.previousElementSibling.innerHTML.replace('▼', '▶');
+          }
+        });
+
+        const isOpen = content.classList.toggle('open');
+        toggle.innerHTML = toggle.innerHTML.replace(isOpen ? '▶' : '▼', isOpen ? '▼' : '▶');
+      });
+    });
+  </script>
+
+</body>
+</html>
