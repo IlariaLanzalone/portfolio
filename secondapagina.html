@@ -5,228 +5,82 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Portfolio di Ilaria Lanzalone</title>
   <link rel="stylesheet" href="style.css" />
-  <style>
-    <style>
-    .accordion-section {
-  max-width: 800px;
-  margin: 20px auto;
-  background: #f5e9ff;
-  border: 2px solid #c6a0ff;
-  border-radius: 20px;
-  padding: 20px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
-  transition: all 0.3s ease;
-}
-
-.accordion-toggle {
-  cursor: pointer;
-  font-size: 1.5em;
-  font-weight: bold;
-  color: #7a4cc7;
-  position: relative;
-  padding-left: 30px;
-}
-
-.accordion-toggle::before {
-  content: "▶";
-  position: absolute;
-  left: 0;
-  transition: transform 0.3s ease;
-}
-
-.accordion-toggle.open::before {
-  content: "▼";
-}
-
-.accordion-content {
-  display: none;
-  padding-top: 15px;
-  font-size: 1.05em;
-}
-
-.accordion-content.open {
-  display: block;
-}
-
-ul {
-  list-style: none;
-  padding-left: 0;
-}
-  .accordion-section {
-    max-width: 800px;
-    margin: 20px auto;
-    background: #f4eaff;
-    border: 2px solid #bba5e3;
-    border-radius: 16px;
-    padding: 20px;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-  }
-
-  .accordion-toggle {
-    cursor: pointer;
-    font-size: 1.3em;
-    font-weight: bold;
-    margin-bottom: 10px;
-    color: #7d4bb1;
-  }
-
-  .accordion-toggle::before {
-    content: "▶ ";
-    display: inline-block;
-    transition: transform 0.3s ease;
-  }
-
-  .accordion-content {
-    display: none;
-    padding-top: 10px;
-  }
-
-  .accordion-content.open {
-    display: block;
-  }
-
-  .accordion-toggle.open::before {
-    content: "▼ ";
-  }
-
-  header {
-    text-align: center;
-    margin-bottom: 40px;
-  }
-
-  header h1 {
-    font-size: 2.5em;
-    color: #6f42c1;
-  }
-
-  header p {
-    font-size: 1.2em;
-    color: #9c73e6;
-  }
-
-  .go-back {
-    text-align: center;
-    margin-top: 40px;
-  }
-
-  .button {
-    background-color: #cdaaff;
-    color: white;
-    padding: 10px 20px;
-    border-radius: 30px;
-    border: none;
-    font-size: 1em;
-    text-decoration: none;
-    transition: background-color 0.3s ease;
-  }
-
-  .button:hover {
-    background-color: #ae86e7;
-  }
-
-  ul {
-    list-style: none;
-    padding-left: 0;
-  }
-
-  ul li::before {
-    content: "";
-    margin-right: 0;
-  }
-</style>
-  </style>
 </head>
 <body>
 
   <header>
-    <h1>Ilaria Lanzalone</h1>
-    <p>Studentessa appassionata di programmazione, fotografia e design</p>
+    <h1 class="main-title">Ilaria Lanzalone</h1>
+    <p class="subtitle">Studentessa appassionata di programmazione, fotografia e design</p>
   </header>
 
-  <!-- Chi sono come accordion -->
-  <section class="accordion-section">
-    <h2 class="accordion-toggle"> Chi sono</h2>
-    <div class="accordion-content">
-      <p>Mi chiamo Ilaria Lanzalone. Frequento il liceo Scientifico Opzione Scienze Applicate Leonardo Da Vinci. Sono appassionata di programmazione e fotografia. Amo esplorare nuove tecnologie e creare progetti sia grafici che software.</p>
+  <main>
+    <section class="intro-box accordion-section">
+      <h2 class="accordion-toggle">▶ Chi sono</h2>
+      <div class="accordion-content">
+        <p>Mi chiamo Ilaria Lanzalone. Frequento il liceo Scientifico Opzione Scienze Applicate Leonardo Da Vinci. Sono appassionata di programmazione e fotografia. Amo esplorare nuove tecnologie e creare progetti sia grafici che software.</p>
+      </div>
+    </section>
+
+    <section class="intro-box accordion-section">
+      <h2 class="accordion-toggle">▶ I miei progetti ed esperienze</h2>
+      <div class="accordion-content">
+        <h3>📌 Progetti scolastici</h3>
+        <p><strong>Cartoline Virtuali (PON)</strong> – cartoline digitali e riprese con drone.</p>
+        <p><strong>Video promozionale</strong> – montaggio video per la scuola.</p>
+        <p><strong>PON Construct</strong> – videogioco educativo con Construct.</p>
+        <p><strong>Laboratori scolastici</strong> – HTML, MySQL, C++ su progetti concreti.</p>
+
+        <h3>📸 Attività extracurriculari</h3>
+        <p><strong>Portfolio fotografico</strong> – fotografia artistica ed editing.</p>
+        <p><strong>Corso LearnGo</strong> – certificazione Go (Golang).</p>
+
+        <h3>📚 Altre competenze sviluppate</h3>
+        <p>Reti e protocolli, matematica logica, inglese.</p>
+      </div>
+    </section>
+
+    <section class="intro-box accordion-section">
+      <h2 class="accordion-toggle">▶ Le mie competenze</h2>
+      <div class="accordion-content">
+        <p>✅ Programmazione in Go (Golang) – corso <strong>LearnGo</strong> con attestato</p>
+        <p>✅ Conoscenze di C++, HTML, CSS</p>
+        <p>✅ Esperienza con GitHub e gestione di progetti open source</p>
+        <p>✅ Linguaggi aggiuntivi: MySQL, VBA (Visual Basic per Excel), Visual Basic</p>
+        <p>✅ Fondamenti di reti (indirizzi IP, subnetting, configurazioni base)</p>
+        <p>✅ Fotografia e montaggio video (drone, editing, creatività visiva)</p>
+        <p>✅ Grafica digitale e design (progetti personali e scolastici)</p>
+        <p>✅ Costruzione di videogiochi con Construct</p>
+        <p>✅ Inglese (buona comprensione e produzione)</p>
+        <p>✅ Competenze matematiche e logiche grazie ai percorsi informatici seguiti</p>
+      </div>
+    </section>
+
+    <div class="button-container">
+      <button class="btn" onclick="location.href='index.html'">⬅ Torna all’introduzione</button>
     </div>
-  </section>
-
-  <!-- Progetti ed esperienze -->
-  <section class="accordion-section">
-    <h2 class="accordion-toggle"> I miei progetti ed esperienze</h2>
-    <div class="accordion-content">
-      <h3>📌 Progetti scolastici</h3>
-      <ul>
-        <li><strong>Cartoline Virtuali (PON)</strong> – cartoline digitali e riprese con drone.</li>
-        <li><strong>Video promozionale</strong> – montaggio video per la scuola.</li>
-        <li><strong>PON Construct</strong> – videogioco educativo con Construct.</li>
-        <li><strong>Laboratori scolastici</strong> – HTML, MySQL, C++ su progetti concreti.</li>
-      </ul>
-
-      <h3>📸 Attività extracurriculari</h3>
-      <ul>
-        <li><strong>Portfolio fotografico</strong> – fotografia artistica ed editing.</li>
-        <li><strong>Corso LearnGo</strong> – certificazione Go (Golang).</li>
-      </ul>
-
-      <h3>📚 Altre competenze sviluppate</h3>
-      <ul>
-        <li>Reti e protocolli, matematica logica, inglese.</li>
-      </ul>
-    </div>
-  </section>
-
-  <!-- Competenze -->
-  <section class="accordion-section">
-    <h2 class="accordion-toggle"> Le mie competenze</h2>
-    <div class="accordion-content">
-      <ul>
-        <li>✅ Programmazione in Go (Golang) – corso <strong>LearnGo</strong> con attestato</li>
-        <li>✅ Conoscenze di C++, HTML, CSS</li>
-        <li>✅ Esperienza con GitHub e gestione di progetti open source</li>
-        <li>✅ Linguaggi aggiuntivi: MySQL, VBA (Visual Basic per Excel), Visual Basic</li>
-        <li>✅ Fondamenti di reti (indirizzi IP, subnetting, configurazioni base)</li>
-        <li>✅ Fotografia e montaggio video (drone, editing, creatività visiva)</li>
-        <li>✅ Grafica digitale e design (progetti personali e scolastici)</li>
-        <li>✅ Costruzione di videogiochi con Construct</li>
-        <li>✅ Inglese (buona comprensione e produzione)</li>
-        <li>✅ Competenze matematiche e logiche grazie ai percorsi informatici seguiti</li>
-      </ul>
-    </div>
-  </section>
-
-  <div class="go-back">
-    <a href="index.html" class="button">⬅ Torna all’introduzione</a>
-  </div>
+  </main>
 
   <footer>
     <p>© 2025 Ilaria Lanzalone</p>
   </footer>
 
   <script>
-    // Funzione accordion su tutti i titoli
     document.querySelectorAll('.accordion-toggle').forEach(toggle => {
       toggle.addEventListener('click', () => {
         const content = toggle.nextElementSibling;
         const isOpen = content.classList.toggle('open');
-        toggle.classList.toggle('open', isOpen);
 
-        if (isOpen) {
-          toggle.innerHTML = '▼ ' + toggle.textContent.replace(/^▶ |▼ /, '').trim();
-        } else {
-          toggle.innerHTML = '▶ ' + toggle.textContent.replace(/^▶ |▼ /, '').trim();
-        }
+        // Chiudi gli altri
+        document.querySelectorAll('.accordion-content').forEach(c => {
+          if (c !== content) {
+            c.classList.remove('open');
+            c.previousElementSibling.innerHTML = c.previousElementSibling.innerHTML.replace('▼', '▶');
+          }
+        });
+
+        toggle.innerHTML = toggle.innerHTML.replace(isOpen ? '▶' : '▼', isOpen ? '▼' : '▶');
       });
     });
   </script>
-<script>
-  document.querySelectorAll('.accordion-toggle').forEach(toggle => {
-    toggle.addEventListener('click', () => {
-      const content = toggle.nextElementSibling;
-      const isOpen = content.classList.toggle('open');
-      toggle.classList.toggle('open', isOpen);
-    });
-  });
-</script>
 </body>
-</
+</html>
