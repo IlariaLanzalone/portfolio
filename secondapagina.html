@@ -6,120 +6,89 @@
   <title>Portfolio di Ilaria Lanzalone</title>
   <link rel="stylesheet" href="style.css" />
   <style>
-    /* Solo per questa pagina: stile riquadri per accordion */
-    .accordion-section {
-      max-width: 720px;
-      margin: 30px auto;
-      border: 3px solid #7e6eb9;
-      border-radius: 20px;
-      background-color: #e8e5f7;
-      color: #4a3f7a;
-      box-shadow: 0 10px 25px rgba(126, 110, 185, 0.15);
-      padding: 0 30px 20px 30px;
-      text-align: left;
-      overflow: hidden;
-    }
-    /* Titoli accordion */
-    .accordion-toggle {
-      cursor: pointer;
-      font-weight: 700;
-      font-size: 1.8rem;
-      padding: 15px 0;
-      user-select: none;
-      color: #7e6eb9;
-      border-bottom: 1px solid #7e6eb9;
-      display: flex;
-      align-items: center;
-      gap: 10px;
-    }
-    /* Triangolino */
-    .accordion-toggle::before {
-      content: '▶';
-      color: #7e6eb9;
-      font-weight: bold;
-      display: inline-block;
-      width: 1.2em;
-      transition: transform 0.3s ease;
-      flex-shrink: 0;
-    }
-    /* Triangolo ruotato quando aperto */
-    .accordion-toggle.open::before {
-      transform: rotate(90deg);
-    }
-    /* Contenuto accordion, inizialmente nascosto */
-    .accordion-content {
-      max-height: 0;
-      overflow: hidden;
-      transition: max-height 0.35s ease, padding-top 0.35s ease;
-      font-size: 1.1rem;
-      line-height: 1.6;
-      padding-left: 1.5em;
-      padding-top: 0;
-    }
-    /* Contenuto aperto */
-    .accordion-content.open {
-      max-height: 1000px; /* abbastanza grande da contenere il testo */
-      padding-top: 15px;
-    }
-    /* Liste senza pallini */
-    .accordion-content ul {
-      list-style: none;
-      padding-left: 0;
-      margin-left: 0;
-      text-align: justify;
-    }
-    .accordion-content ul li {
-      margin-bottom: 8px;
-    }
-    /* Bottone torna indietro identico a index */
-    .go-back {
-      max-width: 720px;
-      margin: 50px auto;
-      text-align: center;
-    }
-    .go-back .button {
-      font-size: 1.3rem;
-      font-weight: 700;
-      padding: 16px 50px;
-      color: #7e6eb9;
-      background-color: transparent;
-      border: 3px solid #7e6eb9;
-      border-radius: 45px;
-      cursor: pointer;
-      transition: all 0.4s ease;
-      display: inline-block;
-      box-shadow: 0 7px 18px rgba(126, 110, 185, 0.3);
-      text-decoration: none;
-      user-select: none;
-    }
-    .go-back .button:hover {
-      color: white;
-      background-color: #7e6eb9;
-      box-shadow: 0 9px 28px rgba(126, 110, 185, 0.7);
-      border-color: #6b5fad;
-    }
-    /* Header centrato e titolo più grande */
-    header {
-      text-align: center;
-      margin-bottom: 40px;
-    }
-    header h1 {
-      font-size: 3.5rem;
-      color: #7e6eb9;
-      margin: 0;
-    }
-    header p {
-      font-style: italic;
-      font-size: 1.4rem;
-      color: #a89ee1;
-      margin: 0;
-    }
-    footer {
-      text-align: center;
-      font-style: italic;
-      color: #a89ee1;
-      padding-bottom: 20px;
-    }
+    <style>
+  .accordion-section {
+    max-width: 800px;
+    margin: 20px auto;
+    background: #f4eaff;
+    border: 2px solid #bba5e3;
+    border-radius: 16px;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  }
+
+  .accordion-toggle {
+    cursor: pointer;
+    font-size: 1.3em;
+    font-weight: bold;
+    margin-bottom: 10px;
+    color: #7d4bb1;
+  }
+
+  .accordion-toggle::before {
+    content: "▶ ";
+    display: inline-block;
+    transition: transform 0.3s ease;
+  }
+
+  .accordion-content {
+    display: none;
+    padding-top: 10px;
+  }
+
+  .accordion-content.open {
+    display: block;
+  }
+
+  .accordion-toggle.open::before {
+    content: "▼ ";
+  }
+
+  header {
+    text-align: center;
+    margin-bottom: 40px;
+  }
+
+  header h1 {
+    font-size: 2.5em;
+    color: #6f42c1;
+  }
+
+  header p {
+    font-size: 1.2em;
+    color: #9c73e6;
+  }
+
+  .go-back {
+    text-align: center;
+    margin-top: 40px;
+  }
+
+  .button {
+    background-color: #cdaaff;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 30px;
+    border: none;
+    font-size: 1em;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+  }
+
+  .button:hover {
+    background-color: #ae86e7;
+  }
+
+  ul {
+    list-style: none;
+    padding-left: 0;
+  }
+
+  ul li::before {
+    content: "";
+    margin-right: 0;
+  }
+</style>
   </style>
 </head>
 <body>
