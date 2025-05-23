@@ -65,12 +65,12 @@
   </footer>
 
   <script>
+  document.addEventListener('DOMContentLoaded', function () {
     document.querySelectorAll('.accordion-toggle').forEach(toggle => {
       toggle.addEventListener('click', () => {
         const content = toggle.nextElementSibling;
         const isOpen = content.classList.toggle('open');
 
-        // Chiudi gli altri
         document.querySelectorAll('.accordion-content').forEach(c => {
           if (c !== content) {
             c.classList.remove('open');
@@ -81,6 +81,7 @@
         toggle.innerHTML = toggle.innerHTML.replace(isOpen ? '▶' : '▼', isOpen ? '▼' : '▶');
       });
     });
-  </script>
+  });
+</script>
 </body>
 </html>
