@@ -3,33 +3,32 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Introduzione - Ilaria Lanzalone</title>
+  <title>Ilaria Lanzalone – Presentazione</title>
   <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
 </head>
 <body>
-
-  <header>
-    <h1>Ilariaa Lanzalone</h1>
-    <p>Benvenuto! In questa pagina ti presento il mio percorso.</p>
-  </header>
-
-  <main>
-    <section>
-      <h2>Il mio percorso</h2>
-      <p>
-        Questo progetto rappresenta una sintesi delle competenze che ho acquisito durante il mio percorso scolastico e personale.  
-        Lavorando con HTML, CSS e JavaScript ho imparato a strutturare e personalizzare contenuti web in modo efficace e creativo.
-        Questa pagina introduttiva è collegata a un portfolio interattivo dove mostro i miei progetti e le competenze sviluppate.
-      </p>
-    </section>
-
-    <section class="centered">
-    </section>
+  <div class="overlay"></div>
+  <main class="hero">
+    <h1 class="titolo">Ilaria Lanzalone</h1>
+    <p class="sottotitolo">Studentessa appassionata di HTML, CSS e JavaScript</p>
+    <p class="descrizione">
+      Questo progetto rappresenta una sintesi delle competenze che ho acquisito durante il mio percorso scolastico e personale.
+      Ho lavorato con costanza sull'apprendimento di HTML, CSS e JavaScript, creando interfacce web efficaci e accessibili.
+      In questa pagina mostro i risultati del mio impegno.
+    </p>
+    <a href="secondapagina.html" class="pulsante">Vai al mio portfolio</a>
   </main>
 
   <footer>
     <p>© 2025 Ilaria Lanzalone</p>
   </footer>
-  <a href="secondapagina.html" class="button">Vai al mio portfolio</a>
+
+  <script>
+    // Animazione al caricamento
+    window.addEventListener('load', () => {
+      document.body.classList.add('loaded');
+    });
+  </script>
 </body>
 </html>
