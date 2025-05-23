@@ -7,6 +7,51 @@
   <link rel="stylesheet" href="style.css" />
   <style>
     <style>
+    .accordion-section {
+  max-width: 800px;
+  margin: 20px auto;
+  background: #f5e9ff;
+  border: 2px solid #c6a0ff;
+  border-radius: 20px;
+  padding: 20px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  transition: all 0.3s ease;
+}
+
+.accordion-toggle {
+  cursor: pointer;
+  font-size: 1.5em;
+  font-weight: bold;
+  color: #7a4cc7;
+  position: relative;
+  padding-left: 30px;
+}
+
+.accordion-toggle::before {
+  content: "▶";
+  position: absolute;
+  left: 0;
+  transition: transform 0.3s ease;
+}
+
+.accordion-toggle.open::before {
+  content: "▼";
+}
+
+.accordion-content {
+  display: none;
+  padding-top: 15px;
+  font-size: 1.05em;
+}
+
+.accordion-content.open {
+  display: block;
+}
+
+ul {
+  list-style: none;
+  padding-left: 0;
+}
   .accordion-section {
     max-width: 800px;
     margin: 20px auto;
