@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 <html lang="it">
 <head>
-  <img src="IMG_1379.jpg" alt="Foto di Ilaria Lanzalone" class="foto-profilo">
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Ilaria Lanzalone - Portfolio</title>
@@ -11,6 +10,7 @@
 
   <header>
     <h1>Ilaria Lanzalone</h1>
+    <img src="IMG_1379.jpg" alt="Foto di Ilaria Lanzalone" class="foto-profilo">
     <p>Studentessa appassionata di programmazione, fotografia e design</p>
   </header>
 
@@ -62,64 +62,39 @@
       </ul>
     </div>
   </section>
-  
-  <section class="accordion-section fade-in">
-    <h2 class="accordion-toggle">▶ I miei progetti ed esperienze</h2>
-    <div class="accordion-content">
-      <p>Durante il mio percorso scolastico e personale, ho partecipato a numerose attività che mi hanno permesso di sviluppare competenze tecniche, creative e progettuali.</p>
-      
-      <h3>📌 Progetti scolastici</h3>
-      <ul>
-        <li><strong>Cartoline Virtuali (PON)</strong> – cartoline digitali e riprese con drone.</li>
-        <li><strong>Video promozionale</strong> – montaggio video per la scuola.</li>
-        <li><strong>PON Construct</strong> – videogioco educativo con Construct.</li>
-        <li><strong>Laboratori scolastici</strong> – HTML, MySQL, C++ su progetti concreti.</li>
-      </ul>
-  
-      <h3>📸 Attività extracurriculari</h3>
-      <ul>
-        <li><strong>Portfolio fotografico</strong> – fotografia artistica ed editing.</li>
-        <li><strong>Corso LearnGo</strong> – certificazione Go (Golang).</li>
-      </ul>
-  
-      <h3>📚 Altre competenze sviluppate</h3>
-      <ul>
-        <li>Reti e protocolli, matematica logica, inglese.</li>
-      </ul>
+
+  <section id="bacheca">
+    <h2>🎨 La mia Bacheca Creativa</h2>
+    <div class="gallery">
+      <img src="IMG_5616.jpg" alt="Foto 1">
+      <img src="foto2.jpg" alt="Foto 2">
+      <img src="foto3.jpg" alt="Foto 3">
+      <!-- aggiungine quante ne vuoi -->
     </div>
   </section>
 
   <footer>
-    <p>© 2025 Ilaria Lanzalone</p>
+    <p>Grazie per l'attenzione e alla prossima!<br>© 2025 Ilaria Lanzalone</p>
   </footer>
+
   <script>
     document.querySelectorAll('.accordion-toggle').forEach(toggle => {
       toggle.addEventListener('click', () => {
         const content = toggle.nextElementSibling;
         const allContents = document.querySelectorAll('.accordion-content');
-  
-        // Chiude tutte le altre sezioni
+
         allContents.forEach(c => {
           if (c !== content) {
             c.classList.remove('open');
-            c.previousElementSibling.innerHTML = c.previousElementSibling.innerHTML.replace('⯆', '⯈');
+            c.previousElementSibling.innerHTML = c.previousElementSibling.innerHTML.replace('▼', '▶');
           }
         });
-  
-        // Alterna apertura/chiusura
+
         const isOpen = content.classList.toggle('open');
         toggle.innerHTML = toggle.innerHTML.replace(isOpen ? '▶' : '▼', isOpen ? '▼' : '▶');
       });
     });
-    <section id="bacheca">
-  <h2>🎨 La mia Bacheca Creativa</h2>
-  <div class="gallery">
-    <img src="IMG_5616.jpg" alt="Foto 1">
-    <img src="foto2.jpg" alt="Foto 2">
-    <img src="foto3.jpg" alt="Foto 3">
-    <!-- aggiungine quante ne vuoi -->
-  </div>
-</section>
   </script>
+
 </body>
 </html>
