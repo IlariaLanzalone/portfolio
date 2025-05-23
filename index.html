@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Ilaria Lanzalone - Portfolio</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <header>
+    <h1>Ilaria Lanzalone</h1>
+    <p>Studentessa appassionata di programmazione, fotografia e design</p>
+  </header>
+
+  <section id="chi-sono">
+    <h2>Chi sono</h2>
+    <p>Mi chiamo Ilaria Lanzalone. Frequento il liceo Scientifico Opzione Scienze Applicate Leonardo Da Vinci. Sono appassionata di programmazione e fotografia. Amo esplorare nuove tecnologie e creare progetti sia grafici che software.</p>
+  </section>
+
+  <section class="accordion-section fade-in">
+    <h2 class="accordion-toggle">▶ I miei progetti ed esperienze</h2>
+    <div class="accordion-content">
+      <p>Durante il mio percorso scolastico e personale, ho partecipato a numerose attività che mi hanno permesso di sviluppare competenze tecniche, creative e progettuali.</p>
+      
+      <h3>📌 Progetti scolastici</h3>
+      <ul>
+        <li><strong>Cartoline Virtuali (PON)</strong> – cartoline digitali e riprese con drone.</li>
+        <li><strong>Video promozionale</strong> – montaggio video per la scuola.</li>
+        <li><strong>PON Construct</strong> – videogioco educativo con Construct.</li>
+        <li><strong>Laboratori scolastici</strong> – HTML, MySQL, C++ su progetti concreti.</li>
+      </ul>
+  
+      <h3>📸 Attività extracurriculari</h3>
+      <ul>
+        <li><strong>Portfolio fotografico</strong> – fotografia artistica ed editing.</li>
+        <li><strong>Corso LearnGo</strong> – certificazione Go (Golang).</li>
+      </ul>
+  
+      <h3>📚 Altre competenze sviluppate</h3>
+      <ul>
+        <li>Reti e protocolli, matematica logica, inglese.</li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="accordion-section fade-in">
+    <h2 class="accordion-toggle">▶ Le mie competenze</h2>
+    <div class="accordion-content">
+      <ul>
+        <li>✅ Programmazione in Go (Golang) – corso <strong>LearnGo</strong> con attestato</li>
+        <li>✅ Conoscenze di C++, HTML, CSS</li>
+        <li>✅ Esperienza con GitHub e gestione di progetti open source</li>
+        <li>✅ Linguaggi aggiuntivi: MySQL, VBA (Visual Basic per Excel), Visual Basic</li>
+        <li>✅ Fondamenti di reti (indirizzi IP, subnetting, configurazioni base)</li>
+        <li>✅ Fotografia e montaggio video (drone, editing, creatività visiva)</li>
+        <li>✅ Grafica digitale e design (progetti personali e scolastici)</li>
+        <li>✅ Costruzione di videogiochi con Construct</li>
+        <li>✅ Inglese (buona comprensione e produzione)</li>
+        <li>✅ Competenze matematiche e logiche grazie ai percorsi informatici seguiti</li>
+      </ul>
+    </div>
+  </section>
+  
+  <section class="accordion-section fade-in">
+    <h2 class="accordion-toggle">▶ I miei progetti ed esperienze</h2>
+    <div class="accordion-content">
+      <p>Durante il mio percorso scolastico e personale, ho partecipato a numerose attività che mi hanno permesso di sviluppare competenze tecniche, creative e progettuali.</p>
+      
+      <h3>📌 Progetti scolastici</h3>
+      <ul>
+        <li><strong>Cartoline Virtuali (PON)</strong> – cartoline digitali e riprese con drone.</li>
+        <li><strong>Video promozionale</strong> – montaggio video per la scuola.</li>
+        <li><strong>PON Construct</strong> – videogioco educativo con Construct.</li>
+        <li><strong>Laboratori scolastici</strong> – HTML, MySQL, C++ su progetti concreti.</li>
+      </ul>
+  
+      <h3>📸 Attività extracurriculari</h3>
+      <ul>
+        <li><strong>Portfolio fotografico</strong> – fotografia artistica ed editing.</li>
+        <li><strong>Corso LearnGo</strong> – certificazione Go (Golang).</li>
+      </ul>
+  
+      <h3>📚 Altre competenze sviluppate</h3>
+      <ul>
+        <li>Reti e protocolli, matematica logica, inglese.</li>
+      </ul>
+    </div>
+  </section>
+
+  <footer>
+    <p>© 2025 Ilaria Lanzalone</p>
+  </footer>
+  <script>
+    document.querySelectorAll('.accordion-toggle').forEach(toggle => {
+      toggle.addEventListener('click', () => {
+        const content = toggle.nextElementSibling;
+        const allContents = document.querySelectorAll('.accordion-content');
+  
+        // Chiude tutte le altre sezioni
+        allContents.forEach(c => {
+          if (c !== content) {
+            c.classList.remove('open');
+            c.previousElementSibling.innerHTML = c.previousElementSibling.innerHTML.replace('⯆', '⯈');
+          }
+        });
+  
+        // Alterna apertura/chiusura
+        const isOpen = content.classList.toggle('open');
+        toggle.innerHTML = toggle.innerHTML.replace(isOpen ? '▶' : '▼', isOpen ? '▼' : '▶');
+      });
+    });
+  </script>
+</body>
+</html>
