@@ -108,3 +108,24 @@ footer {
   font-size: 0.9rem;
   color: #a89ee1;
 }
+.accordion-section {
+  width: 90%; /* oppure 800px fissa, scegli tu */
+  max-width: 800px;
+  margin: 20px auto;
+  background: #f5e9ff;
+  border: 2px solid #c6a0ff;
+  border-radius: 20px;
+  padding: 20px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+.accordion-toggle {
+  display: block;           /* importante */
+  width: 100%;              /* riempie tutto il riquadro */
+  font-size: 1.5em;
+  font-weight: bold;
+  color: #7a4cc7;
+  cursor: pointer;
+  position: relative;
+  padding-left: 30px;
+}
