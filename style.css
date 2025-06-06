@@ -157,7 +157,7 @@ footer {
   display: block;
 }
 /* Foto profilo */
-/* Container per immagine */
+/* Foto profilo con cerchio */
 .profile-pic-container {
   margin: 40px auto;
   width: 180px;
@@ -166,9 +166,11 @@ footer {
   overflow: hidden;
   border: 4px solid #7e6eb9;
   box-shadow: 0 8px 20px rgba(126, 110, 185, 0.3);
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-/* Immagine vera e propria */
 .profile-pic {
   width: 100%;
   height: 100%;
