@@ -164,7 +164,7 @@ footer {
   align-items: center;
 }
 
-.profile-pic {
+.‎profile-pic-container{
   width: 180px;
   height: 180px;
   border-radius: 50%; /* fa diventare la foto un cerchio */
@@ -174,7 +174,7 @@ footer {
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-.profile-pic:hover {
+.p‎profile-pic-container:hover {
   transform: scale(1.05);
   box-shadow: 0 12px 28px rgba(126, 110, 185, 0.5);
 }
